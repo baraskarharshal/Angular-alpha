@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-alpha';
   subject = 'Math';
+  subject1 = "English";
 }
