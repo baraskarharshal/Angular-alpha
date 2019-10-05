@@ -4,17 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: './core/account/account.module#AccountModule'
-    //loadChildren: './features/home/home.module#HomeModule'
+    loadChildren: './features/account/account.module#AccountModule'
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'login',
-  //   pathMatch: 'full'
-  // },
   {
-    path: 'home',
-    loadChildren: './core/layout/layout.module#LayoutModule'
+    path: '',
+    loadChildren: './layout/layout.module#LayoutModule'
   }
 ];
 
