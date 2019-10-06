@@ -4,11 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: './features/account/account.module#AccountModule'
+    loadChildren: () => import('./features/account/account.module').then(m => m.AccountModule), 
   },
   {
     path: '',
-    loadChildren: './layout/layout.module#LayoutModule'
+    loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule), 
   }
 ];
 

@@ -9,7 +9,11 @@ const routes: Routes = [
         children: [
             {
               path: '',
-              loadChildren: './features/demo/demo.module#DemoModule',
+              loadChildren: () => import('../features/demo/demo.module').then(m => m.DemoModule),
+            },
+            {
+              path: 'demo2',
+              loadChildren: () => import('../features/demo2/demo2.module').then(m => m.Demo2Module),
             }
           ]
     }
