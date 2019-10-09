@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { AccountRoutingModule } from './account-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -13,7 +12,9 @@ import { HttpClient } from '@angular/common/http';
     AccountRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClient
+    HttpClientModule
+  ],
+  providers: [
   ]
 })
 export class AccountModule { }

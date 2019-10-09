@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute) {
     // redirect to home if already logged in
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/demo']);
+      this.router.navigate(['demo2']);
     }
   }
 
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['/demo']);
+          this.router.navigate(['']);
         },
         error => {
           this.error = error;
