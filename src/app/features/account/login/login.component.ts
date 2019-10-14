@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   loading = false;
   error = '';
+  public isCollapsed = false;
 
   constructor(private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService,

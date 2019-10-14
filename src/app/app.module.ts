@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './features/account/interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './features/account/interceptors/error.interceptor';
 import { fakeBackendProvider } from './features/account/interceptors/fake-backend';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { fakeBackendProvider } from './features/account/interceptors/fake-backen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
